@@ -1,0 +1,32 @@
+M2. SETTINGS.XML
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>registry.hub.docker.com</id>
+            <username>vision97</username>
+            <password>docker@KAUSHAL</password>
+        </server>
+    </servers>
+</settings>
+
+
+PlugIn at plugin in POM file like this
+
+<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<configuration>
+					<from>
+						<image>openjdk:11</image>
+					</from>
+					<to>
+						<image>registry.hub.docker.com/dailycodebuffer/orderservice</image>
+						<tags>${project.version}</tags>
+					</to>
+				</configuration>
+			</plugin>
+	
